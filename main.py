@@ -1,8 +1,6 @@
 
-def print_hi(name):
-    print(f'Hi, {name}')
-
+import perfect_dish
 
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    perfect_dish.perfect_dish_to_division()
 
