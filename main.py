@@ -1,6 +1,9 @@
 import interleave
 
 if __name__ == '__main__':
-    print(interleave.interleave('abc', [1, 2, 3], ('!', '@', '#')))
+    interleave1 = interleave.interleave('abc', [1, 2, 3], ('!', '@', '#'))
+
+    for item in interleave1:
+        print(item)
 
 
