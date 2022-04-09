@@ -52,11 +52,11 @@ def average_runtime(iterable: Iterable) -> float:
 
 
 if __name__ == '__main__':
-    li = build_words_list_from_file_words("words.txt")
-    se = build_words_set_from_file_words("words.txt")
+    words_list = build_words_list_from_file_words("words.txt")
+    words_set = build_words_set_from_file_words("words.txt")
 
-    li_amount = average_runtime(li)
-    set_amount = average_runtime(se)
+    amount_of_list_time = average_runtime(words_list)
+    amount_of_set_time = average_runtime(words_set)
 
-    print(li_amount)
-    print(set_amount)
+    print(amount_of_list_time)
+    print(amount_of_set_time)
