@@ -15,11 +15,8 @@ def split_zipped_list(zipped_list: list[Iterable]) -> Generator[Any, Any, None]:
     :param zipped_list: List of lists.
     :return:Generator of One lists from all lists.
     """
-    return (item for sub_list in zipped_list for item in sub_list)
+    for sub_list in zipped_list:
+        for item in sub_list:
+            yield item
 
 
-if __name__ == '__main__':
-    interleave1 = interleave('abc', [1, 2, 3], ('!', '@', '#'))
-
-    for item in interleave1:
-        print(item)
