@@ -2,22 +2,24 @@ import time
 from typing import Iterable
 
 
-def build_words_list_from_file_words(file_name: str) -> list:
+def build_words_list(file_name: str) -> list:
     """
+    Open the file and return all words as a list.
     :param file_name: File_text to read words.
     :return: List with all words as values.
     """
-    with open(file_name, 'r') as fdr:
-        return fdr.read().split()
+    with open(file_name, 'r') as file_descriptor:
+        return file_descriptor.read().split()
 
 
-def build_words_set_from_file_words(file_name: str) -> set:
+def build_words_set(file_name: str) -> set:
     """
+    Open the file and return all words as a set.
     :param file_name: File_text to read words.
     :return: Set with all words as values.
     """
-    with open(file_name, 'r') as fdr:
-        return set(fdr.read().split())
+    with open(file_name, 'r') as file_descriptor:
+        return set(file_descriptor.read().split())
 
 
 def find_word(iterable: Iterable, word: str) -> bool:
@@ -52,8 +54,8 @@ def average_runtime(iterable: Iterable) -> float:
 
 
 if __name__ == '__main__':
-    words_list = build_words_list_from_file_words("words.txt")
-    words_set = build_words_set_from_file_words("words.txt")
+    words_list = build_words_list("words.txt")
+    words_set = build_words_set("words.txt")
 
     amount_of_list_time = average_runtime(words_list)
     amount_of_set_time = average_runtime(words_set)
