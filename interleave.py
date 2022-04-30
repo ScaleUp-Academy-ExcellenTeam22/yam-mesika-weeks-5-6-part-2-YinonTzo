@@ -20,3 +20,12 @@ def split_zipped_list(zipped_list: list[Iterable]) -> Generator[Any, Any, None]:
             yield item
 
 
+def main():
+    interleave1 = interleave('abc', [1, 2, 3], ('!', '@', '#'))
+
+    for item in interleave1:
+        print(item)
+
+
+if __name__ == '__main__':
+    main()
